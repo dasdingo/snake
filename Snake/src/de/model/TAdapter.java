@@ -7,7 +7,7 @@ import java.awt.event.KeyListener;
 public class TAdapter extends KeyAdapter{
 
 	Direction direction=Direction.Ost;
-
+    boolean gamePause = false;
 	public Direction getDirection() {
 		return direction;
 	}
@@ -36,6 +36,9 @@ public class TAdapter extends KeyAdapter{
 			if(direction != Direction.Ost){
 			direction = Direction.West;
 			}
+			break;
+		case KeyEvent.VK_ESCAPE:
+			gamePause = !gamePause;
 			break;
 		default:
 		}
